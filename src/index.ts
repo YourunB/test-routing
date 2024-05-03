@@ -38,7 +38,7 @@ class Router {
 
   constructor() {
     window.addEventListener('popstate', () => {
-      this.route(window.location.pathname);
+      this.route(window.location.pathname, false);
     });
   }
 
@@ -46,10 +46,12 @@ class Router {
     this.routes.push(route);
   }
 
-  route(pathname: string) {
+  route(pathname: string, pushState = true) {
     for (const route of this.routes) {
       if (route.path === pathname) {
-        window.history.pushState({}, '', pathname);
+        if (pushState) {
+          window.history.pushState({}, '', pathname);
+        }
         route.handler();
         return;
       }
