@@ -1,7 +1,9 @@
 import './index.sass';
 //import { catPage } from './pages/catPage';
 //import { dogPage } from './pages/dogPage';
-import { hamsterPage } from './pages/hamsterPage';
+//import { hamsterPage } from './pages/hamsterPage';
+//import { rabbitPage } from './pages/rabbitPage';
+import { raccoonPage } from './pages/raccoonPage';
 
 const header = document.createElement('header');
 const main = document.createElement('main');
@@ -18,7 +20,7 @@ header.innerHTML = `
   </ul>
 `;
 
-main.append(hamsterPage);
+main.append(raccoonPage);
 
 footer.innerHTML = `
   <span>2024</span>
