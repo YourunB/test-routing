@@ -1,4 +1,5 @@
 import './index.sass';
+import { catPage } from './pages/catPage';
 
 const header = document.createElement('header');
 const main = document.createElement('main');
@@ -13,6 +14,13 @@ header.innerHTML = `
     <li><a href="">Rabbit</a></li>
     <li><a href="">Raccoon</a></li>
   </ul>
+`;
+
+main.append(catPage);
+
+footer.innerHTML = `
+  <span>2024</span>
+  <a href="https://github.com/yourunb">&copy; Yury Butskevich</a>
 `;
 
 document.body.append(header, main, footer);
