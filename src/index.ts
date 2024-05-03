@@ -108,6 +108,34 @@ router.addRoute({
   },
 });
 
+window.onload = () => {
+  if (location.pathname === '/test-routing/') {
+    router.route('/test-routing/');
+    return;
+  }
+  if (location.pathname === '/test-routing/cat') {
+    router.route('/test-routing/cat');
+    return;
+  }
+  if (location.pathname === '/test-routing/dog') {
+    router.route('/test-routing/dog');
+    return;
+  }
+  if (location.pathname === '/test-routing/hamster') {
+    router.route('/test-routing/hamster');
+    return;
+  }
+  if (location.pathname === '/test-routing/rabbit') {
+    router.route('/test-routing/rabbit');
+    return;
+  }
+  if (location.pathname === '/test-routing/raccoon') {
+    router.route('/test-routing/raccoon');
+    return;
+  }
+  router.route('/test-routing/');
+};
+
 const menuItems = document.getElementsByClassName('menu__item');
 menuItems[0].addEventListener('click', () => {
   router.route('/test-routing/');
