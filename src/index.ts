@@ -62,7 +62,7 @@ class Router {
 const router = new Router();
 
 router.addRoute({
-  path: '/cat',
+  path: '/test-routing/cat',
   handler: () => {
     main.innerHTML = '';
     main.append(catPage);
@@ -71,7 +71,7 @@ router.addRoute({
 });
 
 router.addRoute({
-  path: '/dog',
+  path: '/test-routing/dog',
   handler: () => {
     main.innerHTML = '';
     main.append(dogPage);
@@ -80,9 +80,9 @@ router.addRoute({
 });
 
 header.addEventListener('click', () => {
-  router.route('/dog');
+  router.route('/test-routing/dog');
 });
 
 footer.addEventListener('click', () => {
-  router.route('/cat');
+  router.route('/test-routing/cat');
 });
