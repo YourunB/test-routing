@@ -12,7 +12,17 @@
   margin: 0
   padding: 0
 
+.page-404__image
+  max-width: 280px
+  filter: invert(1)
+  animation: earth-rotate 10s linear infinite
+
 .page-404__description
   text-align: center
   width: 100%
   
+@keyframes earth-rotate
+  0%
+    transform: rotate(0)
+  100%
+    transform: rotate(360deg)
