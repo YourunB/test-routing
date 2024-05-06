@@ -5,6 +5,7 @@ import { hamsterPage } from './pages/hamsterPage';
 import { rabbitPage } from './pages/rabbitPage';
 import { raccoonPage } from './pages/raccoonPage';
 import { mainPage } from './pages/mainPage';
+import { notFoundPage } from './pages/notFoundPage';
 
 const header = document.createElement('header');
 const main = document.createElement('main');
@@ -110,6 +111,14 @@ router.addRoute({
   },
 });
 
+router.addRoute({
+  path: '/test-routing/404',
+  handler: () => {
+    main.innerHTML = '';
+    main.append(notFoundPage);
+  },
+});
+
 window.onload = () => {
   if (location.pathname === '/test-routing/') {
     router.route('/test-routing/');
@@ -135,7 +144,7 @@ window.onload = () => {
     router.route('/test-routing/raccoon');
     return;
   }
-  router.route('/test-routing/');
+  router.route('/test-routing/404');
 };
 
 const menuItems = document.getElementsByClassName('menu__item');
